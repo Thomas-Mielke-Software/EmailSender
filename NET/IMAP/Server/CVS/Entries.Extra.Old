@@ -1,0 +1,13 @@
+/AuthUser_EventArgs.cs////*///
+/Folder_EventArgs.cs////*///
+/IMAP_Folder.cs////*///
+/IMAP_Folders.cs////*///
+/IMAP_Message.cs////*///
+/IMAP_MessageFlags.cs////*///
+/IMAP_Messages.cs////*///
+/IMAP_Server.cs////*///
+/IMAP_Server.resx////*///
+/IMAP_Session.cs////*///
+/Message_EventArgs.cs////*///
+/_FetchHelper.cs////*///
+/vssver.scc////*///

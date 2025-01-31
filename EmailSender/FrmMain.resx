@@ -1,0 +1,2593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="mainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menuItem1.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mnuFileNew.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlN</value>
+  </data>
+  <data name="mnuFileNew.Text" xml:space="preserve">
+    <value>&amp;New Profile</value>
+  </data>
+  <data name="mnuFileOpen.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlO</value>
+  </data>
+  <data name="mnuFileOpen.Text" xml:space="preserve">
+    <value>&amp;Open Profile...</value>
+  </data>
+  <data name="mnuFileMerge.Text" xml:space="preserve">
+    <value>&amp;Merge Profile...</value>
+  </data>
+  <data name="menuItem4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuFileSave.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlS</value>
+  </data>
+  <data name="mnuFileSave.Text" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="menuItem6.Text" xml:space="preserve">
+    <value>Save &amp;As...</value>
+  </data>
+  <data name="menuItem7.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuFileExit.Text" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="menuItem9.Text" xml:space="preserve">
+    <value>&amp;Recipients</value>
+  </data>
+  <data name="menuItem12.Text" xml:space="preserve">
+    <value>&amp;Add...</value>
+  </data>
+  <data name="menuItem13.Text" xml:space="preserve">
+    <value>&amp;Properties...</value>
+  </data>
+  <data name="menuItem14.Text" xml:space="preserve">
+    <value>&amp;Delete Selected</value>
+  </data>
+  <data name="menuItem20.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItem23.Text" xml:space="preserve">
+    <value>Select Duplicates</value>
+  </data>
+  <data name="menuItem24.Text" xml:space="preserve">
+    <value>Select Unsent</value>
+  </data>
+  <data name="menuItem25.Text" xml:space="preserve">
+    <value>Select Sent</value>
+  </data>
+  <data name="menuItem26.Text" xml:space="preserve">
+    <value>Select Failed</value>
+  </data>
+  <data name="menuItem69.Text" xml:space="preserve">
+    <value>Select Bad Email</value>
+  </data>
+  <data name="menuItem15.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItem16.Text" xml:space="preserve">
+    <value>&amp;Select All</value>
+  </data>
+  <data name="menuItem64.Text" xml:space="preserve">
+    <value>&amp;Inverse Select</value>
+  </data>
+  <data name="menuItem63.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItem21.Text" xml:space="preserve">
+    <value>C&amp;heck Selected</value>
+  </data>
+  <data name="menuItem22.Text" xml:space="preserve">
+    <value>&amp;Uncheck Selected</value>
+  </data>
+  <data name="menuItem17.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItem18.Text" xml:space="preserve">
+    <value>&amp;Import External File...</value>
+  </data>
+  <data name="menuItem71.Text" xml:space="preserve">
+    <value>Export Selected &amp;To External File...</value>
+  </data>
+  <data name="menuItem19.Text" xml:space="preserve">
+    <value>&amp;Export All To External File...</value>
+  </data>
+  <data name="menuItem73.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItem74.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>CtrlF</value>
+  </data>
+  <data name="menuItem74.Text" xml:space="preserve">
+    <value>&amp;Find...</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuItem75.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="menuItem75.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
+    <value>F3</value>
+  </data>
+  <data name="menuItem75.Text" xml:space="preserve">
+    <value>Find &amp;Next</value>
+  </data>
+  <data name="menuItem48.Text" xml:space="preserve">
+    <value>&amp;Compose Email</value>
+  </data>
+  <data name="menuItem49.Text" xml:space="preserve">
+    <value>&amp;Insert Fields</value>
+  </data>
+  <data name="menuItem59.Text" xml:space="preserve">
+    <value>&lt;=Email&gt;</value>
+  </data>
+  <data name="menuItem60.Text" xml:space="preserve">
+    <value>&lt;=Name&gt;</value>
+  </data>
+  <data name="menuItem70.Text" xml:space="preserve">
+    <value>&lt;=Company&gt;</value>
+  </data>
+  <data name="menuItem61.Text" xml:space="preserve">
+    <value>&lt;=Memo&gt;</value>
+  </data>
+  <data name="menuItem62.Text" xml:space="preserve">
+    <value>&lt;=Time&gt;</value>
+  </data>
+  <data name="menuItem65.Text" xml:space="preserve">
+    <value>&lt;=FromEmail&gt;</value>
+  </data>
+  <data name="menuItem66.Text" xml:space="preserve">
+    <value>&lt;=FromName&gt;</value>
+  </data>
+  <data name="menuItem67.Text" xml:space="preserve">
+    <value>&lt;=ReplyEmail&gt;</value>
+  </data>
+  <data name="mnuLoadFileText.Text" xml:space="preserve">
+    <value>Load &amp;File As Body Text...</value>
+  </data>
+  <data name="menuItem27.Text" xml:space="preserve">
+    <value>&amp;View</value>
+  </data>
+  <data name="menuItem28.Text" xml:space="preserve">
+    <value>&amp;Recipients</value>
+  </data>
+  <data name="menuItem29.Text" xml:space="preserve">
+    <value>&amp;Mail Content</value>
+  </data>
+  <data name="menuItem30.Text" xml:space="preserve">
+    <value>A&amp;ttachment</value>
+  </data>
+  <data name="menuItem10.Text" xml:space="preserve">
+    <value>&amp;Log</value>
+  </data>
+  <data name="menuItem32.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuViewOptions.Text" xml:space="preserve">
+    <value>&amp;Options...</value>
+  </data>
+  <data name="menuItem34.Text" xml:space="preserve">
+    <value>&amp;Sending Emails</value>
+  </data>
+  <data name="mnuSendStart.Text" xml:space="preserve">
+    <value>&amp;Start/Continue</value>
+  </data>
+  <data name="mnuSendPause.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuSendPause.Text" xml:space="preserve">
+    <value>&amp;Pause</value>
+  </data>
+  <data name="mnuSendStop.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuSendStop.Text" xml:space="preserve">
+    <value>S&amp;top</value>
+  </data>
+  <data name="menuItem39.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="menuItem40.Text" xml:space="preserve">
+    <value>Online User &amp;Guide</value>
+  </data>
+  <data name="menuItem44.Text" xml:space="preserve">
+    <value>&amp;Send Feedbak</value>
+  </data>
+  <data name="menuItem41.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="menuItem42.Text" xml:space="preserve">
+    <value>&amp;Check for Update...</value>
+  </data>
+  <data name="menuItem45.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuAbout.Text" xml:space="preserve">
+    <value>&amp;About...</value>
+  </data>
+  <data name="statusBarMain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="statusBarMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 328</value>
+  </data>
+  <data name="statusBarMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 22</value>
+  </data>
+  <data name="statusBarMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;statusBarMain.Name" xml:space="preserve">
+    <value>statusBarMain</value>
+  </data>
+  <data name="&gt;&gt;statusBarMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusBarMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="statusBarPanelMsg.Name" xml:space="preserve">
+    <value>statusBarPanelMsg</value>
+  </data>
+  <data name="statusBarPanelMsg.Text" xml:space="preserve">
+    <value>statusBarPanelMsg</value>
+  </data>
+  <data name="statusBarPanelMsg.Width" type="System.Int32, mscorlib">
+    <value>330</value>
+  </data>
+  <data name="statusBarPanelStatus.Name" xml:space="preserve">
+    <value>statusBarPanelStatus</value>
+  </data>
+  <data name="statusBarPanelStatus.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="statusBarPanelStatus.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="statusBarPanelSuccess.Name" xml:space="preserve">
+    <value>statusBarPanelSuccess</value>
+  </data>
+  <data name="statusBarPanelSuccess.Text" xml:space="preserve">
+    <value>Success: 0</value>
+  </data>
+  <data name="statusBarPanelSuccess.Width" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="statusBarPanelFail.Name" xml:space="preserve">
+    <value>statusBarPanelFail</value>
+  </data>
+  <data name="statusBarPanelFail.Text" xml:space="preserve">
+    <value>Fail: 0</value>
+  </data>
+  <data name="statusBarPanelFail.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="statusBarPanelTotal.Name" xml:space="preserve">
+    <value>statusBarPanelTotal</value>
+  </data>
+  <data name="statusBarPanelTotal.Text" xml:space="preserve">
+    <value>Total: 0</value>
+  </data>
+  <data name="statusBarPanelTotal.Width" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="statusBarPanel1.Name" xml:space="preserve">
+    <value>statusBarPanel1</value>
+  </data>
+  <data name="statusBarPanel1.Width" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="columnHeader9.Text" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="columnHeader10.Text" xml:space="preserve">
+    <value>Carrier</value>
+  </data>
+  <data name="uxListViewAddress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="uxListViewAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="uxListViewAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 274</value>
+  </data>
+  <metadata name="imageList2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>127, 17</value>
+  </metadata>
+  <data name="imageList2.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="uxListViewAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;uxListViewAddress.Name" xml:space="preserve">
+    <value>uxListViewAddress</value>
+  </data>
+  <data name="&gt;&gt;uxListViewAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uxListViewAddress.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;uxListViewAddress.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 274</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Recipients</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 274</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Mail Content</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 274</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lvLog.Name" xml:space="preserve">
+    <value>lvLog</value>
+  </data>
+  <data name="&gt;&gt;lvLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvLog.Parent" xml:space="preserve">
+    <value>tabLog</value>
+  </data>
+  <data name="&gt;&gt;lvLog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 274</value>
+  </data>
+  <data name="tabLog.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabLog.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;tabLog.Name" xml:space="preserve">
+    <value>tabLog</value>
+  </data>
+  <data name="&gt;&gt;tabLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabLog.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabLog.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControlMain.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 300</value>
+  </data>
+  <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Name" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControlMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControl1.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl1.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 100</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 174</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtBody.Name" xml:space="preserve">
+    <value>txtBody</value>
+  </data>
+  <data name="&gt;&gt;txtBody.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBody.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;txtBody.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 148</value>
+  </data>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Email Body</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtBody.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="txtBody.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="txtBody.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtBody.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="txtBody.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 148</value>
+  </data>
+  <data name="txtBody.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtBody.Name" xml:space="preserve">
+    <value>txtBody</value>
+  </data>
+  <data name="&gt;&gt;txtBody.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBody.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;txtBody.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.Name" xml:space="preserve">
+    <value>webBrowser1</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 148</value>
+  </data>
+  <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="webBrowser1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="webBrowser1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="webBrowser1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 148</value>
+  </data>
+  <data name="webBrowser1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.Name" xml:space="preserve">
+    <value>webBrowser1</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;webBrowser1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
+    <value>comboBox1</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.Name" xml:space="preserve">
+    <value>txtFromEmail</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.Name" xml:space="preserve">
+    <value>txtFromName</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtReply.Name" xml:space="preserve">
+    <value>txtReply</value>
+  </data>
+  <data name="&gt;&gt;txtReply.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtReply.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtReply.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.Name" xml:space="preserve">
+    <value>txtSubject</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.Name" xml:space="preserve">
+    <value>uxFormat</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.Name" xml:space="preserve">
+    <value>comboBox3</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 100</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBox1.ItemHeight" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="comboBox1.Items" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="comboBox1.Items1" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="comboBox1.Items2" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 4</value>
+  </data>
+  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
+    <value>comboBox1</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtFromEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 4</value>
+  </data>
+  <data name="txtFromEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="txtFromEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.Name" xml:space="preserve">
+    <value>txtFromEmail</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtFromEmail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 8</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Sender email:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Sender name:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtFromName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 28</value>
+  </data>
+  <data name="txtFromName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="txtFromName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.Name" xml:space="preserve">
+    <value>txtFromName</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtFromName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 56</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Reply to:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 80</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtReply.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 52</value>
+  </data>
+  <data name="txtReply.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="txtReply.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtReply.Name" xml:space="preserve">
+    <value>txtReply</value>
+  </data>
+  <data name="&gt;&gt;txtReply.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtReply.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtReply.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 8</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Priority:</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 32</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtSubject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 76</value>
+  </data>
+  <data name="txtSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>472, 20</value>
+  </data>
+  <data name="txtSubject.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.Name" xml:space="preserve">
+    <value>txtSubject</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;txtSubject.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="uxFormat.ItemHeight" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="uxFormat.Items" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="uxFormat.Items1" xml:space="preserve">
+    <value>text/html</value>
+  </data>
+  <data name="uxFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 28</value>
+  </data>
+  <data name="uxFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="uxFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="uxFormat.Text" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.Name" xml:space="preserve">
+    <value>uxFormat</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;uxFormat.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="comboBox3.ItemHeight" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="comboBox3.Items" xml:space="preserve">
+    <value>UTF8</value>
+  </data>
+  <data name="comboBox3.Items1" xml:space="preserve">
+    <value>US-ASCII</value>
+  </data>
+  <data name="comboBox3.Items2" xml:space="preserve">
+    <value>ISO-8859-1</value>
+  </data>
+  <data name="comboBox3.Items3" xml:space="preserve">
+    <value>GB2312</value>
+  </data>
+  <data name="comboBox3.Items4" xml:space="preserve">
+    <value>BIG5</value>
+  </data>
+  <data name="comboBox3.Items5" xml:space="preserve">
+    <value>JIS</value>
+  </data>
+  <data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 52</value>
+  </data>
+  <data name="comboBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="comboBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="comboBox3.Text" xml:space="preserve">
+    <value>UTF8</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.Name" xml:space="preserve">
+    <value>comboBox3</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;comboBox3.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 56</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Encoding:</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>366</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <metadata name="contextMenuAttach.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 17</value>
+  </metadata>
+  <data name="listView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 36</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 238</value>
+  </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>381, 17</value>
+  </metadata>
+  <data name="imageList1.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="menuItem53.Text" xml:space="preserve">
+    <value>Add...</value>
+  </data>
+  <data name="menuItem51.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="menuItem52.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.Name" xml:space="preserve">
+    <value>btnAttAdd</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 36</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>395, 54</value>
+  </metadata>
+  <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE/NksEK
+        ACAIQ/3/n7aCCil18xIF3bbXZop8c1RE10Whhu7SWIAr6A74QAaBZhvprFMyLxBTCc1qd45mkgJs7HIF
+        z0BDMiGswixTCGHM1NBgzLmR8AufCRqBbmOd3qyLPgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>524, 8</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button2.ToolTip" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnAttAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnAttAdd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnAttAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAPYAACMjG+3t7fb29nJyAPLy8hsbElVVVS8vAP//unl5AEREOPj4+P//TSQkGyMjFjMz
+        JPPz8xoaGvr6+u/vOvLyuOvr6/Dw8CwsJEVFOTIyMz8/ImRkAO7uOtzcJvT09DExJiMjJGlpAPHx8UxM
+        P1lZWe/vvCYmFO3tvNjY2P//uCsrK+Hhuj09PW5ubmdnAA4ODO3tOf//Ti0tMG9vAObm5v//vjc3AODg
+        4O3ttDc3Md7eJlNTU+DgJ///thwcHVZWVt7eJ4aGANzcJ+rq6t3dJiIiGikpAHR0AO/vuPT0uiwsIz4+
+        ONra2t7e3hERB0FBQSQkJHp6ABcXABcXF/HxOsvLE2hoACQkI0BANDg4OBoaAEZGOBsbAPLyOygoKPHx
+        uHBwAHNzAGtrAIWFAG1tbezs7PLyOoKCAIODAHd3APf39zMzM////wAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAGwALAAAAAAQABAAAAe1gGyC
+        g4SFhoMVBiwGFWwLh2wEZDdDTS1MJARsagKPgxCDKF4RAhYjaxhlaqsSqx47U1lqWEInRBprD7kZTwIB
+        IqA+FDE9E19mFF0rMhKEDjApDAhUSBMlQB8WqwIEIDjSOkYFXAVaThcXSlc/Dhw1HQdWRwP0aWlRLjk0
+        UEk8ByFo0JwZiCZImC0B2JioYkPMGIEE0YBRkJDNCykbEtjbmGAGxUEqIjRoAKBkySJLKkJayfJQIAA7
+</value>
+  </data>
+  <data name="btnAttAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAttAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>488, 8</value>
+  </data>
+  <data name="btnAttAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="btnAttAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnAttAdd.ToolTip" xml:space="preserve">
+    <value>Add attachment(s)</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.Name" xml:space="preserve">
+    <value>btnAttAdd</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;btnAttAdd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lvLog.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lvLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lvLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 274</value>
+  </data>
+  <data name="lvLog.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lvLog.Name" xml:space="preserve">
+    <value>lvLog</value>
+  </data>
+  <data name="&gt;&gt;lvLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvLog.Parent" xml:space="preserve">
+    <value>tabLog</value>
+  </data>
+  <data name="&gt;&gt;lvLog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="columnHeader7.Text" xml:space="preserve">
+    <value>Local Time</value>
+  </data>
+  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="columnHeader8.Text" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="columnHeader8.Width" type="System.Int32, mscorlib">
+    <value>295</value>
+  </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>487, 17</value>
+  </metadata>
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="openFileDialog1.Title" xml:space="preserve">
+    <value>Choose Attachments</value>
+  </data>
+  <metadata name="openFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>620, 17</value>
+  </metadata>
+  <data name="openFileDialog2.Filter" xml:space="preserve">
+    <value>Address files (*.txt)|*.txt|All files (*.*)|*.*</value>
+  </data>
+  <data name="openFileDialog2.Title" xml:space="preserve">
+    <value>Import Recipients</value>
+  </data>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <data name="saveFileDialog1.Filter" xml:space="preserve">
+    <value>EmailSender profiles (*.xml)|*.xml|All files (*.*)|*.*</value>
+  </data>
+  <data name="saveFileDialog1.Title" xml:space="preserve">
+    <value>Save Profile...</value>
+  </data>
+  <metadata name="openFileDialog3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>149, 54</value>
+  </metadata>
+  <data name="openFileDialog3.Filter" xml:space="preserve">
+    <value>EmailSender profiles (*.xml)|*.xml|All files (*.*)|*.*</value>
+  </data>
+  <data name="openFileDialog3.Title" xml:space="preserve">
+    <value>Open EmailSender Profile</value>
+  </data>
+  <metadata name="tmrFailRetry.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 54</value>
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>395, 54</value>
+  </metadata>
+  <data name="toolBar1.Appearance" type="System.Windows.Forms.ToolBarAppearance, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="toolBarButtonNew.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="toolBarButtonNew.ToolTipText" xml:space="preserve">
+    <value>New profile</value>
+  </data>
+  <data name="toolBarButtonOpen.ImageIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="toolBarButtonOpen.ToolTipText" xml:space="preserve">
+    <value>Open existing profile</value>
+  </data>
+  <data name="toolBarButtonSave.ImageIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="toolBarButtonSave.ToolTipText" xml:space="preserve">
+    <value>Save profile</value>
+  </data>
+  <data name="toolBarButtonAdd.ImageIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="toolBarButtonAdd.ToolTipText" xml:space="preserve">
+    <value>Add recipient</value>
+  </data>
+  <data name="toolBarButtonEdit.ImageIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="toolBarButtonEdit.ToolTipText" xml:space="preserve">
+    <value>Edit recipient</value>
+  </data>
+  <data name="toolBarButtonDelete.ImageIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="toolBarButtonDelete.ToolTipText" xml:space="preserve">
+    <value>Delete recipient</value>
+  </data>
+  <data name="toolBarButtonStart.ImageIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="toolBarButtonStart.ToolTipText" xml:space="preserve">
+    <value>Start/Continue sending emails</value>
+  </data>
+  <data name="toolBarButtonPause.ImageIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="toolBarButtonPause.ToolTipText" xml:space="preserve">
+    <value>Pause sending emails</value>
+  </data>
+  <data name="toolBarButtonStop.ImageIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="toolBarButtonStop.ToolTipText" xml:space="preserve">
+    <value>Stop sending emails</value>
+  </data>
+  <data name="toolBarButtonOption.ImageIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="toolBarButtonOption.ToolTipText" xml:space="preserve">
+    <value>Application option</value>
+  </data>
+  <data name="toolBar1.ButtonSize" type="System.Drawing.Size, System.Drawing">
+    <value>39, 36</value>
+  </data>
+  <data name="toolBar1.DropDownArrows" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <metadata name="imlToolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 91</value>
+  </metadata>
+  <data name="imlToolbar.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAG
+        EQAAAk1TRnQBSQFMAgEBCwEAAQ4BAAEEAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAATADAAEBAQABCAYAAQwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/4EAAewLBxUACv8VAAHs
+        Cv8BBxUAAf8CAAH/BQAB/xUAAewH/wEAAv8BBxUACv8VAAHsB/8CAwEAAQcJAAHsAwABBwHsBgAB/wIA
+        Af8FAAH/FQAB7AL/BfwBAwH7AQMKAAHsAwABBwHsBgAK/xUAAewI/wEDAfsBAwkABuwGAAf/AQAC/xUA
+        AewC/wb8Af8BAwH7AQMJAAT/AewGAAH/AgAD/wEAAf8BAAH/FQAB7Ar/AQMB+wEDCAAE/wHsBgAB/wEA
+        Af8BAAH/AQAB/wEAAf8WAAHsAv8G/AL/AQcBAwH7AQMHAAT/BwAC/wEAAf8BAAH/AQAB/wEAA/8TAAHs
+        Cv8BBwEAAQMB+QEBFQAB/wEAAf8BAAX/EgAB7Aj/BQACARYAAf8BAAb/EgAB7Aj/AQcB/wHsGwAG/xMA
+        AewI/wEHAew1AArsXAAEJxgAAewEBwIAAewEBwQADQcGAAEnAQICLQF9AScSAAH5AwAB7wHrA/QB8QEA
+        Ae8B6wP0AfEDAALvC/QBBwYAAScDLQF9AScIAAH5DQAB7wEUAV8CCgH0AQAB7wEUAV8CCgH0AwAB7wFt
+        AV8JCgHxAQcGAAEnAy0BfQEnBwAD+QcAAfkEAAHvARQByAGhAV8B9AEAAe8BFAHIAaEBXwH0AwAB7wEU
+        AdQByAehAQoB9AEHBgABJwMtAX0BJwcAA/kGAAH5BQABkgEUAdQByAFfAfQBAAGSARQB1AHIAV8B9AMA
+        AZIBFAHUAc0GyAGhAV8B9AEHAgAFJwEtAS4BLQF9BScEAAP5BAAC+QUAAZIBFAHUAcgBXwH0AQABkgEU
+        AdQByAFfAfQDAAGSARQB1AHNBsgBoQFfAfQBBwEAAScFVQE0Ai4GfQEnBAAD+QIAAvkGAAGSARQB1AHI
+        AV8B9AEAAZIBFAHUAcgBXwH0AwABkgEUAdQBzQbIAaEBXwH0AQcBAAEnAlYHVQE0Ai4BLQEuAScFAAX5
+        BwABkgEUAdQByAFfAfQBAAGSARQB1AHIAV8B9AMAAZIBFAHUAc0GyAGhAV8B9AEHAQABJwZWB1UBLgEn
+        BgAD+QgAAZIBFAHUAcgBXwH0AQABkgEUAdQByAFfAfQDAAGSARQB1AHNBsgBoQFfAfQBBwEAAScIVgF9
+        BVUBJwUABfkHAAGSARQB1AHIAV8B9AEAAZIBFAHUAcgBXwH0AwABkgEUAdQBzQbIAaEBXwH0AQcCAAUn
+        A1YBfQUnBQAD+QIAAfkHAAGSARQB1AHNAV8B9AEAAZIBFAHUAc0BXwH0AwABkgEUAdQHzQHIAV8B9AEH
+        BgABJwJ4AZcBfQEnBwAE+QQAAvkFAAGSARQB2wHUAccB9AEAAZIBFAHbAdQBxwH0AwABkgEUCdQBxwH0
+        AQcGAAEnA3gBfQEnBgAE+QYAAvkEAAHvAW0CFAFtAe8BAAHvAW0CFAFtAe8DAAHvAW0JFAFtAe8BBwYA
+        AScBmQKYAX0BJwYAAvkJAAL5EwAN7wcAAScBmAKfAX0BJzsABCcWAAGuCbUBrgUABTErAAG1Cf8BtQUA
+        ATEBUgFYBjEIAAMSB+wEEhEAAfcB/wbzAfQB/wG1BQACMQGaATEDNwUxBQADEgfsBBIDAAHvAf8B8QsA
+        AbUB/wHzAbUErgH0Af8B9wUAATEBUgGZAzcGWAExBAABEgJmAd0C/wPiAd0CZgISAwAB6wEEAW0B/wHx
+        CQABtQH/BvMB9AH/AbUFAAExAXkBUgF6CFkBeQExAwABEgJmAd0C/wPiAd0CZgISAwABFAHIAV8BCgFt
+        Af8B8QcAAbUB/wHzAbUErgH0Af8BtQUAATEBvQExAb0CegNZAXkBeAF5AXoBdAExAgABEgJmAd0C/wPi
+        Ad0CZgISAwABFAHUAcgBoQFfAQoBbQH/AfEFAAHvA/8C9ALzAfQB/wG1BQABMQG9AjECUgF5AZoBoAN4
+        AXkBmgExAgABEgJmA90C4gLdAmYCEgMAARQB1AHNAcgB/AGhAV8BCgFtAf8B8QMAAbUF/wPyAfMBtQUA
+        ATEBmgI4BDEBdAKZAfEBmQG9AXkBMQEAARICjAdmAosCEgMAARQB1AHNA8gB/AGhAV8BCgHvAwABtQH/
+        AfMC9AH/ArUCBwG1Aq4DAAExAcMFOAE3ASkFMAIxAQABEgKMB2YCiwISAwABFAHUAc0FyAHNAV8BEgMA
+        AbUB/wTzAd0B8gL0AbwCrgMAATEBwwU4AS8BLgRWAicBMQEAARICCQGLBWYDiwISAwABFAHUAc0DyALN
+        AaYBFAHsAwABtQH/BPMB3QHzAv8CrgQAATEBwwRZAVgBJwJWAVcCfQFWAScCAAESAgkBZgHsARID7AFm
+        AosCEgMAARQB1ATNAaYBFAHrBQABtQX/AbwB8wH/AfIErgIAATEBwwNZAeUEJwF9AU8DJwIAARICCQES
+        Af8B9gLVAQkBEgKLAhIDAAEUAtQBzQGmARQB6wcAB7UBBwSuBAABMQF5AcMCoAGaAzEBJwF9AQIBMQQA
+        ARICCQESAv8CzgHbARICiwISAwABFAHbAawBFAHrDwAHrgQABTEDAAEnAVYBJwUAARICCQESAv8CzgHb
+        ARICiwISAwABEgEUAesRAAKuAQABrgEAAq4LAAMnBgADEgFmAhICZgESAWYCEhwAAa4NAAInJwABQgFN
+        AT4HAAE+AwABKAMAAUADAAEwAwABAQEAAQEFAAGAAQEWAAP/AQAG/wMAAQcC/wEAAQ8DAAEHAv8BAAEP
+        AwABBwL/AQABDwMAAQcC/wEAAQ8DAAEHAfABHwEAAQ8DAAEHAfABHwEAAQ8DAAEHAfABHwEAAQ8DAAED
+        AfABHwEAAQ4DAAEBAfABHwEAAQQEAAHwAR8GAAHwAR8FAAEEAv8B+AQAAQ8C/wH8BAABHwL/Af4BBAMA
+        AT8E/wIABP8B/AE/Av8BwQGDAcABAQH4AR8B/wH5AYEBAwGAAQEB+AEfAeMB+wGBAQMBgAEBAfgBHwHD
+        AfcBgQEDAYABAQH4AR8BwQHnAYEBAwGAAQEBgAEBAeABzwGBAQMBgAEBAgAB8AEfAYEBAwGAAQECAAH4
+        AT8BgQEDAYABAQIAAfwBPwGBAQMBgAEBAgAB+AEfAYEBAwGAAQEBgAEBAfEBjwGBAQMBgAEBAfgBHwHD
+        AccBgQEDAYABAQH4AR8BhwHjAYEBAwGAAQEB+AEfAZ8B8wL/AYABAwH4AR8G/wH8AT8C/wEAAR8BBwX/
+        AQABHwEAAX8BgAEBAv8BAAEfAQABDwGAAQEBxwH/AQABHwEAAQcBgAEBAcEB/wEAAR8BAAEDAYABAQHA
+        AX8BAAEfAQABAQGAAQEBwAEfAQABHwEAAQEBgAEBAcABBwEAAR8CAAGAAQEBwAEHAQABBwIAAYABAQHA
+        AQcBAAEHAgABgAEBAcABBwEAAQ8BAAEBAYABAQHAAR8BAAEDAQABAQGAAQEBwAF/AQABDwEAAQcBgAEB
+        AcEB/wH8AQcBgwGPAYABAQHHAf8B/AGnAf8BHwGAAQcD/wG/Af4BfwT/Cw==
+</value>
+  </data>
+  <data name="toolBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="toolBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolBar1.ShowToolTips" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="toolBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 28</value>
+  </data>
+  <data name="toolBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.Name" xml:space="preserve">
+    <value>toolBar1</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolBar1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="openFileDialog4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>486, 54</value>
+  </metadata>
+  <data name="openFileDialog4.Filter" xml:space="preserve">
+    <value>Text files (*.txt)|*.txt|Html files(*.htm,*.html)|*.htm,*.html|All files (*.*)|*.*</value>
+  </data>
+  <data name="openFileDialog4.Title" xml:space="preserve">
+    <value>Import Recipients</value>
+  </data>
+  <metadata name="saveFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>619, 54</value>
+  </metadata>
+  <data name="saveFileDialog2.Title" xml:space="preserve">
+    <value>Export Recipients</value>
+  </data>
+  <metadata name="tmrSaveFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>870, 54</value>
+  </metadata>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>747, 54</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>142</value>
+  </metadata>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>5, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>568, 350</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAICAQAAAAAADoAgAAJgAAABAQEAAAAAAAKAEAAA4DAAAoAAAAIAAAAEAAAAABAAQAAAAAAAAC
+        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAd3d3d3d3d3d3d3d3d3dwBEREREREREREREREREREcAT/
+        ////////////////9HAE///4iIiIiIiIiIiI//RwBP/4AAAAAAAAAAAACI/0cAT/8P////////////CP
+        9HAE//D////////////wj/RwBP/w/////4iI////8I/0cAT/8P////AAAI////CP9HAE//D///8P//8I
+        ///wj/RwBP/w///w////8I//8I/0cAT/8P//D/////8I//CP9HAE//D/8P//////8I/wj/RwBP/w/w//
+        //////8I8I/0cAT/8PD/////////8ICP9HAE//AP//////////8Aj/RwBP/4AAAAAAAAAAAACP/0cAT/
+        ////////////////9HAE//////////////////RwBP/////////////////0cASIiIiIiIiIiIiIiIiI
+        hHAERERERERERERERERERERwBExMTExMTExMTE7Ozkl0cATMzMzMzMzMzMzMzMzMxAAARERERERERERE
+        REREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        /////////////8AAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
+        AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAA8AAAAf/////////////
+        //8oAAAAEAAAACAAAAABAAQAAAAAAIAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAA
+        AACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAB3d3d3d3
+        d3dERERERERER0////////hHT/AAAAAP+EdP8P///w/4R0/w/wD/D/hHT/Dw/w8P+EdP8A//8A/4R0/w
+        AAAAD/hHT///////+EdIiIiIiIiIR0zMzMzMzMxHxERERERERMAAAAAAAAAAAAAAAAAAAAAA//8AAIAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAD//wAA//8AAA==
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>EmailSender</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Name" xml:space="preserve">
+    <value>mainMenu1</value>
+  </data>
+  <data name="&gt;&gt;mainMenu1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Name" xml:space="preserve">
+    <value>menuItem1</value>
+  </data>
+  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuFileNew.Name" xml:space="preserve">
+    <value>mnuFileNew</value>
+  </data>
+  <data name="&gt;&gt;mnuFileNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuFileOpen.Name" xml:space="preserve">
+    <value>mnuFileOpen</value>
+  </data>
+  <data name="&gt;&gt;mnuFileOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuFileMerge.Name" xml:space="preserve">
+    <value>mnuFileMerge</value>
+  </data>
+  <data name="&gt;&gt;mnuFileMerge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Name" xml:space="preserve">
+    <value>menuItem4</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuFileSave.Name" xml:space="preserve">
+    <value>mnuFileSave</value>
+  </data>
+  <data name="&gt;&gt;mnuFileSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Name" xml:space="preserve">
+    <value>menuItem6</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem7.Name" xml:space="preserve">
+    <value>menuItem7</value>
+  </data>
+  <data name="&gt;&gt;menuItem7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuFileExit.Name" xml:space="preserve">
+    <value>mnuFileExit</value>
+  </data>
+  <data name="&gt;&gt;mnuFileExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem9.Name" xml:space="preserve">
+    <value>menuItem9</value>
+  </data>
+  <data name="&gt;&gt;menuItem9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem12.Name" xml:space="preserve">
+    <value>menuItem12</value>
+  </data>
+  <data name="&gt;&gt;menuItem12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem13.Name" xml:space="preserve">
+    <value>menuItem13</value>
+  </data>
+  <data name="&gt;&gt;menuItem13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem14.Name" xml:space="preserve">
+    <value>menuItem14</value>
+  </data>
+  <data name="&gt;&gt;menuItem14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem20.Name" xml:space="preserve">
+    <value>menuItem20</value>
+  </data>
+  <data name="&gt;&gt;menuItem20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem23.Name" xml:space="preserve">
+    <value>menuItem23</value>
+  </data>
+  <data name="&gt;&gt;menuItem23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem24.Name" xml:space="preserve">
+    <value>menuItem24</value>
+  </data>
+  <data name="&gt;&gt;menuItem24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem25.Name" xml:space="preserve">
+    <value>menuItem25</value>
+  </data>
+  <data name="&gt;&gt;menuItem25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem26.Name" xml:space="preserve">
+    <value>menuItem26</value>
+  </data>
+  <data name="&gt;&gt;menuItem26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem69.Name" xml:space="preserve">
+    <value>menuItem69</value>
+  </data>
+  <data name="&gt;&gt;menuItem69.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem15.Name" xml:space="preserve">
+    <value>menuItem15</value>
+  </data>
+  <data name="&gt;&gt;menuItem15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem16.Name" xml:space="preserve">
+    <value>menuItem16</value>
+  </data>
+  <data name="&gt;&gt;menuItem16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem64.Name" xml:space="preserve">
+    <value>menuItem64</value>
+  </data>
+  <data name="&gt;&gt;menuItem64.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem63.Name" xml:space="preserve">
+    <value>menuItem63</value>
+  </data>
+  <data name="&gt;&gt;menuItem63.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem21.Name" xml:space="preserve">
+    <value>menuItem21</value>
+  </data>
+  <data name="&gt;&gt;menuItem21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem22.Name" xml:space="preserve">
+    <value>menuItem22</value>
+  </data>
+  <data name="&gt;&gt;menuItem22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem17.Name" xml:space="preserve">
+    <value>menuItem17</value>
+  </data>
+  <data name="&gt;&gt;menuItem17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem18.Name" xml:space="preserve">
+    <value>menuItem18</value>
+  </data>
+  <data name="&gt;&gt;menuItem18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem71.Name" xml:space="preserve">
+    <value>menuItem71</value>
+  </data>
+  <data name="&gt;&gt;menuItem71.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem19.Name" xml:space="preserve">
+    <value>menuItem19</value>
+  </data>
+  <data name="&gt;&gt;menuItem19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem73.Name" xml:space="preserve">
+    <value>menuItem73</value>
+  </data>
+  <data name="&gt;&gt;menuItem73.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem74.Name" xml:space="preserve">
+    <value>menuItem74</value>
+  </data>
+  <data name="&gt;&gt;menuItem74.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem75.Name" xml:space="preserve">
+    <value>menuItem75</value>
+  </data>
+  <data name="&gt;&gt;menuItem75.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem48.Name" xml:space="preserve">
+    <value>menuItem48</value>
+  </data>
+  <data name="&gt;&gt;menuItem48.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem49.Name" xml:space="preserve">
+    <value>menuItem49</value>
+  </data>
+  <data name="&gt;&gt;menuItem49.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem59.Name" xml:space="preserve">
+    <value>menuItem59</value>
+  </data>
+  <data name="&gt;&gt;menuItem59.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem60.Name" xml:space="preserve">
+    <value>menuItem60</value>
+  </data>
+  <data name="&gt;&gt;menuItem60.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem70.Name" xml:space="preserve">
+    <value>menuItem70</value>
+  </data>
+  <data name="&gt;&gt;menuItem70.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem61.Name" xml:space="preserve">
+    <value>menuItem61</value>
+  </data>
+  <data name="&gt;&gt;menuItem61.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem62.Name" xml:space="preserve">
+    <value>menuItem62</value>
+  </data>
+  <data name="&gt;&gt;menuItem62.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem65.Name" xml:space="preserve">
+    <value>menuItem65</value>
+  </data>
+  <data name="&gt;&gt;menuItem65.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem66.Name" xml:space="preserve">
+    <value>menuItem66</value>
+  </data>
+  <data name="&gt;&gt;menuItem66.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem67.Name" xml:space="preserve">
+    <value>menuItem67</value>
+  </data>
+  <data name="&gt;&gt;menuItem67.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuLoadFileText.Name" xml:space="preserve">
+    <value>mnuLoadFileText</value>
+  </data>
+  <data name="&gt;&gt;mnuLoadFileText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem27.Name" xml:space="preserve">
+    <value>menuItem27</value>
+  </data>
+  <data name="&gt;&gt;menuItem27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem28.Name" xml:space="preserve">
+    <value>menuItem28</value>
+  </data>
+  <data name="&gt;&gt;menuItem28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem29.Name" xml:space="preserve">
+    <value>menuItem29</value>
+  </data>
+  <data name="&gt;&gt;menuItem29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem30.Name" xml:space="preserve">
+    <value>menuItem30</value>
+  </data>
+  <data name="&gt;&gt;menuItem30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem10.Name" xml:space="preserve">
+    <value>menuItem10</value>
+  </data>
+  <data name="&gt;&gt;menuItem10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem32.Name" xml:space="preserve">
+    <value>menuItem32</value>
+  </data>
+  <data name="&gt;&gt;menuItem32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuViewOptions.Name" xml:space="preserve">
+    <value>mnuViewOptions</value>
+  </data>
+  <data name="&gt;&gt;mnuViewOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem34.Name" xml:space="preserve">
+    <value>menuItem34</value>
+  </data>
+  <data name="&gt;&gt;menuItem34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSendStart.Name" xml:space="preserve">
+    <value>mnuSendStart</value>
+  </data>
+  <data name="&gt;&gt;mnuSendStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSendPause.Name" xml:space="preserve">
+    <value>mnuSendPause</value>
+  </data>
+  <data name="&gt;&gt;mnuSendPause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSendStop.Name" xml:space="preserve">
+    <value>mnuSendStop</value>
+  </data>
+  <data name="&gt;&gt;mnuSendStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem39.Name" xml:space="preserve">
+    <value>menuItem39</value>
+  </data>
+  <data name="&gt;&gt;menuItem39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem40.Name" xml:space="preserve">
+    <value>menuItem40</value>
+  </data>
+  <data name="&gt;&gt;menuItem40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem44.Name" xml:space="preserve">
+    <value>menuItem44</value>
+  </data>
+  <data name="&gt;&gt;menuItem44.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem41.Name" xml:space="preserve">
+    <value>menuItem41</value>
+  </data>
+  <data name="&gt;&gt;menuItem41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem42.Name" xml:space="preserve">
+    <value>menuItem42</value>
+  </data>
+  <data name="&gt;&gt;menuItem42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem45.Name" xml:space="preserve">
+    <value>menuItem45</value>
+  </data>
+  <data name="&gt;&gt;menuItem45.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuAbout.Name" xml:space="preserve">
+    <value>mnuAbout</value>
+  </data>
+  <data name="&gt;&gt;mnuAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelMsg.Name" xml:space="preserve">
+    <value>statusBarPanelMsg</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelStatus.Name" xml:space="preserve">
+    <value>statusBarPanelStatus</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelSuccess.Name" xml:space="preserve">
+    <value>statusBarPanelSuccess</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelSuccess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelFail.Name" xml:space="preserve">
+    <value>statusBarPanelFail</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelFail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelTotal.Name" xml:space="preserve">
+    <value>statusBarPanelTotal</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanelTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanel1.Name" xml:space="preserve">
+    <value>statusBarPanel1</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
+    <value>columnHeader4</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
+    <value>columnHeader9</value>
+  </data>
+  <data name="&gt;&gt;columnHeader9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
+    <value>columnHeader5</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
+    <value>columnHeader6</value>
+  </data>
+  <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader10.Name" xml:space="preserve">
+    <value>columnHeader10</value>
+  </data>
+  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageList2.Name" xml:space="preserve">
+    <value>imageList2</value>
+  </data>
+  <data name="&gt;&gt;imageList2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contextMenuAttach.Name" xml:space="preserve">
+    <value>contextMenuAttach</value>
+  </data>
+  <data name="&gt;&gt;contextMenuAttach.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem53.Name" xml:space="preserve">
+    <value>menuItem53</value>
+  </data>
+  <data name="&gt;&gt;menuItem53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem51.Name" xml:space="preserve">
+    <value>menuItem51</value>
+  </data>
+  <data name="&gt;&gt;menuItem51.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem52.Name" xml:space="preserve">
+    <value>menuItem52</value>
+  </data>
+  <data name="&gt;&gt;menuItem52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
+    <value>columnHeader7</value>
+  </data>
+  <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
+    <value>columnHeader8</value>
+  </data>
+  <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog2.Name" xml:space="preserve">
+    <value>openFileDialog2</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog3.Name" xml:space="preserve">
+    <value>openFileDialog3</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmrFailRetry.Name" xml:space="preserve">
+    <value>tmrFailRetry</value>
+  </data>
+  <data name="&gt;&gt;tmrFailRetry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonNew.Name" xml:space="preserve">
+    <value>toolBarButtonNew</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonOpen.Name" xml:space="preserve">
+    <value>toolBarButtonOpen</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSave.Name" xml:space="preserve">
+    <value>toolBarButtonSave</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSplit1.Name" xml:space="preserve">
+    <value>toolBarButtonSplit1</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSplit1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonAdd.Name" xml:space="preserve">
+    <value>toolBarButtonAdd</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonEdit.Name" xml:space="preserve">
+    <value>toolBarButtonEdit</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonDelete.Name" xml:space="preserve">
+    <value>toolBarButtonDelete</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSplit2.Name" xml:space="preserve">
+    <value>toolBarButtonSplit2</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSplit2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonStart.Name" xml:space="preserve">
+    <value>toolBarButtonStart</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonPause.Name" xml:space="preserve">
+    <value>toolBarButtonPause</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonPause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonStop.Name" xml:space="preserve">
+    <value>toolBarButtonStop</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSplit3.Name" xml:space="preserve">
+    <value>toolBarButtonSplit3</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonSplit3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonOption.Name" xml:space="preserve">
+    <value>toolBarButtonOption</value>
+  </data>
+  <data name="&gt;&gt;toolBarButtonOption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imlToolbar.Name" xml:space="preserve">
+    <value>imlToolbar</value>
+  </data>
+  <data name="&gt;&gt;imlToolbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog4.Name" xml:space="preserve">
+    <value>openFileDialog4</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog2.Name" xml:space="preserve">
+    <value>saveFileDialog2</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmrSaveFile.Name" xml:space="preserve">
+    <value>tmrSaveFile</value>
+  </data>
+  <data name="&gt;&gt;tmrSaveFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

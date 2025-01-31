@@ -1,0 +1,6 @@
+SCC = This is a Source Code Control file.
+
+[Net.csproj]
+SCC_Aux_Path = faenapchome1:8877:VSS1
+SCC_Project_Name = $/FaenaSendMail.root/FaenaSendMail
+

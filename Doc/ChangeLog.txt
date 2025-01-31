@@ -1,0 +1,9 @@
+EmailSender Change Log
+
+1.2.1.0 (2008-03-23)
+Fixed bug caused crashes during sending emails.
+Partially fixed Unable to view html email in client issue. HTML email is supported in Direct and SMTP. Not supported via MAPI.
+
+1.2.0.0 Upgrade to .NET Framework 2.0
+
+1.0.0.0	Initial pre-alpha

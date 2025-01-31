@@ -1,0 +1,10 @@
+/AuthUser_EventArgs.cs////*///
+/SMTP_Server.cs////*///
+/SMTP_Session.cs////*///
+/StoreMessage_EventArgs.cs////*///
+/ValidateMailboxSize_EventArgs.cs////*///
+/ValidateRecipient_EventArgs.cs////*///
+/ValidateSender_EventArgs.cs////*///
+/_SMTP_Cmd_Validator.cs////*///
+/SMTP_Server.resx////*///
+/vssver.scc////*///

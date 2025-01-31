@@ -1,0 +1,38 @@
+EmailSender (Development)
+Copyright (C) 2005-2008 by someone.
+Release under GPL
+__________________________________________________________
+
+
+WARNING:
+This is a development version software. It contains bugs. It most likely will crash sometimes, but usually it will not crash your system. Features may be changed in future releases. 
+This version is not recommended for production use.
+
+BRIEF DESCRIPTION:
+
+EmailSender is an open-source program for sending e-mails. The program provides easy and efficient way for direct mailing. It saves your time (a.k.a money) by sending several messages simultaneously. EmailSender is a powerful tool for personalized mass mailing.
+
+Many powerful emailing features including:
+Imports/exports addresses from multiple text formats (Vertical text file, comma delimited text file, tab delimited text file, XML file, and email address only text file).
+Supports send directly, via MAPI (Outlook, Outlook Express, Netscape, etc), or via SMTP.
+Support multiple SMTP servers.
+Send mail filters: name filter, email filter, domain filter, etc. 
+Control sending: control the number of threads, automatically switch the email server.
+Able to safely start, pause, continue and stop send mail action.
+
+ 
+SYSTEM REQUIREMENTS:
+
+ Windows 98/Me/NT4/2000/XP/2003/Vista?
+ Microsoft .NET Framework run-time 2.0
+    
+
+ 
+TECHNICAL SUPPORT:
+
+If you have any problem please contact me by visit https://sourceforge.net/projects/emailsender/
+
+
+____________________________________________________________
+
+Have a great day!

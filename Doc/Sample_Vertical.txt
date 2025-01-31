@@ -1,0 +1,19 @@
+
+
+1. Testing Ltd.
+Address:	42 Wallaby Way, Sydney
+Phone:	(930)  22-6642519
+Fax:	(930)  27-6781151
+E-mail:test@test.com
+Website:	www.sherman.com
+Contact:	Mr P
+
+
+2. Testing Ltd. #2
+Address:	43 Wallaby Way, Sydney
+Phone:	(930)  22-6342519
+Fax:	(930)  27-6381151
+E-mail:myemail@test.com
+Website:	www.address.com
+Contact:	Mr Pd
+
