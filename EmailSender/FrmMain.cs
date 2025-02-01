@@ -40,6 +40,9 @@ using System.Xml.Serialization;
 using System.Runtime.InteropServices;
 using Win32Mapi;
 using System.Collections.Generic;
+using MimeKit;
+using MailKit.Net.Smtp;
+using MailKit;
 
 namespace EmailSender
 {
@@ -1944,7 +1947,7 @@ namespace EmailSender
 			inputEmail  = NulltoString(inputEmail);
 			string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
 				@"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" + 
-				@".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+				@".)+))([a-zA-Z]{2,4}|[0-9]{1,14})(\]?)$";
 			System.Text.RegularExpressions.Regex re = new System.Text.RegularExpressions.Regex(strRegex);
 			if (re.IsMatch(inputEmail))
 				return (true);
@@ -2524,7 +2527,7 @@ namespace EmailSender
             {
                 string to = pAdr.Email;
                 string name = pAdr.Name;
-                string from, fromEmail;
+                string from, fromEmail, fromName;
                 if (svr.IfSpecifySender)
                 {
                     if (svr.ReplyEmail != "")
@@ -2535,7 +2538,10 @@ namespace EmailSender
                     if (svr.SenderName != "")
                     {
                         from = svr.SenderName + "<" + from + ">";
+                        fromName = svr.SenderName;
                     }
+                    else
+                        fromName = null;
                     fromEmail = svr.SenderEmail;
                 }
                 else
@@ -2545,9 +2551,9 @@ namespace EmailSender
                     else
                         from = txtFromEmail.Text.Trim();
                     if (txtFromName.Text.Trim() != "")
-                    {
-                        from = txtFromName.Text + "<" + from + ">";
-                    }
+                        fromName = txtFromName.Text;
+                    else
+                        fromName = null;
                     fromEmail = txtFromEmail.Text.Trim();
                 }
                 //send directly or via smtp
@@ -2567,6 +2573,59 @@ namespace EmailSender
                 //-------------------------------------------------------//
 
                 //--- Send message ------------------------------------------//
+                
+
+                // added new MailKit code
+
+                ListViewItem itm = this.uxListViewAddress.Items[pAdr.Index];
+                itm.SubItems[5].Text = "MailKit";
+
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress(fromName, fromEmail));
+                foreach (var toAddr in m.To)
+                {
+                    message.To.Add(new MailboxAddress(null, toAddr));
+                }
+                message.Subject = m.Subject;
+
+                message.Body = new TextPart("plain")
+                {
+                    Text = m.Body
+                };
+
+                using (var client = new SmtpClient())
+                {
+                    ShowItemCarrier(pAdr.Index, "MailKit SMTP: " + svr.HostID.ToString());
+
+                    try
+                    {
+                        client.Connect(svr.Host, svr.Port, useSsl: !svr.StartTls);
+
+                        // Note: only needed if the SMTP server requires authentication
+                        client.Authenticate(svr.UserID, svr.Password);
+
+                        client.Send(message);
+                        client.Disconnect(true);
+
+                        _cntActive--;
+                        itm.SubItems[3].Text = "Send completed.";
+                        itm.Checked = false;
+                        itm.ImageIndex = 0;
+                        m_cntSuccess++;
+                        DispStatus();
+                        SetBusy(false);
+                    }
+                    catch (Exception e)
+                    {
+                        _cntActive--;
+                        itm.SubItems[3].Text = e.Message;
+                        itm.ImageIndex = 6;
+                        DispStatus();
+                        SetBusy(false);
+                    }
+                }
+
+                /* removed old Smtp_Client code
                 _smtpClient.SmartHost = svr.Host;
                 _smtpClient.UseSmartHost = true;
                 _smtpClient.Port = svr.Port;
@@ -2581,16 +2640,17 @@ namespace EmailSender
                     _smtpClient.Password = "";
                 }
                 ShowItemCarrier(pAdr.Index, "SMTP:" + svr.HostID.ToString());
-
                 _smtpClient.MaxSenderThreads = _appOptions._maxThreads;
                 _smtpClient.BeginSend(new string[] { to }, fromEmail, m.ConstructBinaryMime(), pAdr.Index.ToString());
+                */
+
                 //2008-03-22 VM Free up UI thread
                 //while (_cntActive >= mySetting._maxThreads)
                 //{
                 //    Thread.Sleep(100);
                 //}
             }
-		}
+        }
 
         private delegate void ShowItemCarrierDelegate(int pIndex, string pText);
         private void ShowItemCarrier(int pIndex, string pText)

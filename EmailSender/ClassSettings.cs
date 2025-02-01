@@ -135,7 +135,8 @@ namespace EmailSender
 		[XmlElement("Host")] public string Host = "";
 		[XmlElement("Port")] public int Port = 25;
 		[XmlElement("IfAuth")] public bool IfAuth = false;
-		[XmlElement("UserID")] public string UserID = "";
+        [XmlElement("StartTls")] public bool StartTls = false;        
+        [XmlElement("UserID")] public string UserID = "";
 		[XmlElement("Password")] public string Password = "";
 		[XmlElement("IfLimit")] public bool IfLimit = false;
 		[XmlElement("NrPerSession")] public int NrPerSession = 0;
