@@ -443,7 +443,7 @@ public class Mapi
 
 	public string Error()
 		{
-		if( error <= 26 )
+		if(error >= 0 && error <= 26 )
 			return errors[ error ];
 		return "?unknown? [" + error.ToString() + "]";
 		}
