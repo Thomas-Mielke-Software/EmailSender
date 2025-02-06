@@ -1945,7 +1945,7 @@ namespace EmailSender
 		public bool IsEmail(string inputEmail)
 		{
 			inputEmail  = NulltoString(inputEmail);
-			string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+			string strRegex = @"^([a-zA-Z0-9_\-\.\+\&]+)@((\[[0-9]{1,3}" +
 				@"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" + 
 				@".)+))([a-zA-Z]{2,14}|[0-9]{1,3})(\]?)$";
 			System.Text.RegularExpressions.Regex re = new System.Text.RegularExpressions.Regex(strRegex);
