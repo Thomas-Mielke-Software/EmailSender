@@ -31,10 +31,10 @@ using System.Globalization;
 using System.Threading;
 using System.Net;
 //using System.Net.Mail;
-using LumiSoft.Net;
-using LumiSoft.Net.SMTP.Client;
+//using LumiSoft.Net;
+//using LumiSoft.Net.SMTP.Client;
 //using LumiSoft.Net.Dns;
-using LumiSoft.Net.Mime;
+//using LumiSoft.Net.Mime;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Runtime.InteropServices;
@@ -1432,7 +1432,7 @@ namespace EmailSender
 		private string _oldFormTitle = "";
 		private string _previewFileName = "";
 		private ClassSettings _appOptions;
-        private SMTP_Client _smtpClient;
+        //private SMTP_Client _smtpClient;
 		private int _cntActive = 0;
 		private int _cntQueued = 0;
 		int m_Total = 0;
@@ -1453,13 +1453,13 @@ namespace EmailSender
 			mnuFileNew.PerformClick(); //menu New
             //2008-03-22 VM Set UI owner to "this".
             //client = new SMTP_Client(listViewAddress);
-            _smtpClient = new SMTP_Client(this); 
-            _smtpClient.CompletedAll += new System.EventHandler(this.SendMailCompletedAll);
-			_smtpClient.SendJobCompleted += new SMTP_SendJob_EventHandler(SendMailSendJobCompleted);
-			_smtpClient.PartOfMessageIsSent += new SMTP_PartOfMessage_EventHandler(SendMailPartOfMessageIsSent);
-			_smtpClient.Error += new SMTP_Error_EventHandler(SendMailError);
-			_smtpClient.NewSendJob += new SMTP_SendJob_EventHandler(SendMailNewSendJob);
-			_smtpClient.SessionLog += new LogEventHandler(SendMailSessionLog);
+            // _smtpClient = new SMTP_Client(this); 
+            // _smtpClient.CompletedAll += new System.EventHandler(this.SendMailCompletedAll);
+			// _smtpClient.SendJobCompleted += new SMTP_SendJob_EventHandler(SendMailSendJobCompleted);
+			// _smtpClient.PartOfMessageIsSent += new SMTP_PartOfMessage_EventHandler(SendMailPartOfMessageIsSent);
+			// _smtpClient.Error += new SMTP_Error_EventHandler(SendMailError);
+			// _smtpClient.NewSendJob += new SMTP_SendJob_EventHandler(SendMailNewSendJob);
+			// _smtpClient.SessionLog += new LogEventHandler(SendMailSessionLog);
 			
 			imageList2.ImageSize = new Size(12,12);
 			imageList2.Images.Add (new Bitmap(typeof(FrmMain), "Image.perlblack12x12.gif"));
@@ -2483,38 +2483,39 @@ namespace EmailSender
                 this.Invoke(new SendViaDirectDelegate(SendViaDirect), new object[] { pAdr });
             else
             {
-                string to = pAdr.Email;
-                string name = pAdr.Name;
-                string from = txtFromName.Text + "<" + txtFromEmail.Text + ">";
-                //send directly or via smtp
-                //--- Construct message ---------------------------------//
-                MimeConstructor m = new MimeConstructor();
-                m.To = new string[] { to };
-                m.From = from;
-                m.Subject = ParseMsg(txtSubject.Text, pAdr);
-                m.Body = ParseMsg(txtBody.Text, pAdr);
-                if (this.uxFormat.Text == "text/html")
-                    m.BodyHtml = m.Body;
-                foreach (ListViewItem it in listView1.Items)
-                {
-                    if (File.Exists(it.Text))
-                        m.Attachments.Add(new LumiSoft.Net.Mime.Attachment(it.Text));
-                }
-                //-------------------------------------------------------//
-
-                //--- Send message ------------------------------------------//
-                _smtpClient.DnsServers = (string[])_appOptions.DNS.ToArray(typeof(string)); //new string[]{m_pDnsServer.Text};
-                _smtpClient.UseSmartHost = false;
-                _smtpClient.Username = "";
-                _smtpClient.Password = "";
-                _smtpClient.MaxSenderThreads = _appOptions._maxThreads;
-                ShowItemCarrier(pAdr.Index,"Direct");
-                _smtpClient.BeginSend(new string[] { to }, txtFromEmail.Text, m.ConstructBinaryMime(), pAdr.Index.ToString());
-                //2008-03-22 VM Free UI thread. Cannot do this here. Move outside this thread.
-                //while (_cntActive >= mySetting._maxThreads)
-                //{
-                //    Thread.Sleep(1000); //2008-03-22 VM Increased time interval from 100ms to 1s
-                //}
+                MessageBox.Show("Direct send is not supported in this version.");
+                //    string to = pAdr.Email;
+                //    string name = pAdr.Name;
+                //    string from = txtFromName.Text + "<" + txtFromEmail.Text + ">";
+                //    //send directly or via smtp
+                //    //--- Construct message ---------------------------------//
+                //    MimeConstructor m = new MimeConstructor();
+                //    m.To = new string[] { to };
+                //    m.From = from;
+                //    m.Subject = ParseMsg(txtSubject.Text, pAdr);
+                //    m.Body = ParseMsg(txtBody.Text, pAdr);
+                //    if (this.uxFormat.Text == "text/html")
+                //        m.BodyHtml = m.Body;
+                //    foreach (ListViewItem it in listView1.Items)
+                //    {
+                //        if (File.Exists(it.Text))
+                //            m.Attachments.Add(new LumiSoft.Net.Mime.Attachment(it.Text));
+                //    }
+                //    //-------------------------------------------------------//
+                //
+                //    //--- Send message ------------------------------------------//
+                //    _smtpClient.DnsServers = (string[])_appOptions.DNS.ToArray(typeof(string)); //new string[]{m_pDnsServer.Text};
+                //    _smtpClient.UseSmartHost = false;
+                //    _smtpClient.Username = "";
+                //    _smtpClient.Password = "";
+                //    _smtpClient.MaxSenderThreads = _appOptions._maxThreads;
+                //    ShowItemCarrier(pAdr.Index,"Direct");
+                //    _smtpClient.BeginSend(new string[] { to }, txtFromEmail.Text, m.ConstructBinaryMime(), pAdr.Index.ToString());
+                //    //2008-03-22 VM Free UI thread. Cannot do this here. Move outside this thread.
+                //    //while (_cntActive >= mySetting._maxThreads)
+                //    //{
+                //    //    Thread.Sleep(1000); //2008-03-22 VM Increased time interval from 100ms to 1s
+                //    //}
             }
 		}
 
@@ -2558,18 +2559,18 @@ namespace EmailSender
                 }
                 //send directly or via smtp
                 //--- Construct message ---------------------------------//
-                MimeConstructor m = new MimeConstructor();
-                m.To = new string[] { to };
-                m.From = from;
-                m.Subject = ParseMsg(txtSubject.Text, pAdr, svr);
-                m.Body = ParseMsg(txtBody.Text, pAdr, svr);
-                if (this.uxFormat.Text == "text/html")
-                    m.BodyHtml = m.Body;
-                foreach (ListViewItem it in listView1.Items)
-                {
-                    if (File.Exists(it.Text))
-                        m.Attachments.Add(new LumiSoft.Net.Mime.Attachment(it.Text));
-                }
+                // MimeConstructor m = new MimeConstructor();
+                // m.To = new string[] { to };
+                // m.From = from;
+                // m.Subject = ParseMsg(txtSubject.Text, pAdr, svr);
+                // m.Body = ParseMsg(txtBody.Text, pAdr, svr);
+                // if (this.uxFormat.Text == "text/html")
+                //     m.BodyHtml = m.Body;
+                // foreach (ListViewItem it in listView1.Items)
+                // {
+                //     if (File.Exists(it.Text))
+                //         m.Attachments.Add(new LumiSoft.Net.Mime.Attachment(it.Text));
+                // }
                 //-------------------------------------------------------//
 
                 //--- Send message ------------------------------------------//
@@ -2582,15 +2583,15 @@ namespace EmailSender
 
                 var message = new MimeMessage();
                 message.From.Add(new MailboxAddress(fromName, fromEmail));
-                foreach (var toAddr in m.To)
+                foreach (var toAddr in new string[] { to })
                 {
                     message.To.Add(new MailboxAddress(null, toAddr));
                 }
-                message.Subject = m.Subject;
+                message.Subject = ParseMsg(txtSubject.Text, pAdr, svr);
 
                 message.Body = new TextPart("plain")
                 {
-                    Text = m.Body
+                    Text = ParseMsg(txtBody.Text, pAdr, svr)
                 };
 
                 using (var client = new SmtpClient())
@@ -2708,11 +2709,11 @@ namespace EmailSender
 			else
 			{
 				//if (!validator1.ValidateAll()) return;
-				if (_smtpClient.IsSending)
-				{
-					Log("Please wait for last send job finishes before starting a new one!");
-					return;
-				}
+				//if (_smtpClient.IsSending)
+				//{
+				//	Log("Please wait for last send job finishes before starting a new one!");
+				//	return;
+				//}
 				if (!SaveFile()) 
 					return;
 				LoadSettings();
@@ -3276,7 +3277,7 @@ namespace EmailSender
             else
             {
                 Log("SendMail job remain: " + _cntQueued.ToString());
-                if ((!_smtpClient.IsSending) && (_cntActive == 0) && (_cntQueued == 0))
+                if (/*(!_smtpClient.IsSending) && */(_cntActive == 0) && (_cntQueued == 0))
                 {
                     while (m_paused)
                     {
@@ -3312,25 +3313,25 @@ namespace EmailSender
             }
         }
 
-		private void SendMailSendJobCompleted(object sender, SendJob_EventArgs e)
-		{
-			_cntActive--;
-			Log("SendMail completed: " + e.JobID);
-			ListViewItem itm = FindItem(e.JobID);
-			itm.SubItems[3].Text = "Send completed.";
-			itm.Checked = false;
-			itm.ImageIndex = 0;
-			m_cntSuccess++;
-			DispStatus();
-		}
+		//private void SendMailSendJobCompleted(object sender, SendJob_EventArgs e)
+		//{
+		//	_cntActive--;
+		//	Log("SendMail completed: " + e.JobID);
+		//	ListViewItem itm = FindItem(e.JobID);
+		//	itm.SubItems[3].Text = "Send completed.";
+		//	itm.Checked = false;
+		//	itm.ImageIndex = 0;
+		//	m_cntSuccess++;
+		//	DispStatus();
+		//}
 
-		private void SendMailPartOfMessageIsSent(object sender, PartOfMessage_EventArgs e)
+		/*private void SendMailPartOfMessageIsSent(object sender, PartOfMessage_EventArgs e)
 		{
 			ListViewItem itm = FindItem(e.JobID);
 			itm.SubItems[3].Text = "Sending..." + e.TotalSent.ToString() + " of " + e.MessageSize + " bytes";
-		}
+        }*/
 
-		private void SendMailError(object sender, SMTP_Error e)
+        /*private void SendMailError(object sender, SMTP_Error e)
 		{
 			_cntActive--;
 			string to="";
@@ -3341,12 +3342,12 @@ namespace EmailSender
 			Log("Error sending to " + e.JobID + ": " + e.ErrorText );
 			ListViewItem itm = FindItem(e.JobID);
 			SendMailFail(itm.Index, e.ErrorText);
-		}
+		}*/
 
         //2008-03-22 VM Use delegate to invoke UI
-        private delegate void SendMailNewSendJobDelegate(object sender, SendJob_EventArgs e);
+        //private delegate void SendMailNewSendJobDelegate(object sender, SendJob_EventArgs e);
 
-        private void SendMailNewSendJob(object sender, SendJob_EventArgs e)
+        /*private void SendMailNewSendJob(object sender, SendJob_EventArgs e)
 		{
             if (this.InvokeRequired)
                 this.Invoke(new SendMailNewSendJobDelegate(SendMailNewSendJob), new object[] {sender,e});
@@ -3362,7 +3363,7 @@ namespace EmailSender
                 itm.SubItems[3].Text = "Sending...Job ID:" + e.JobID + " host:" + e.SmartHost;
                 itm.ImageIndex = 1;
             }
-		}
+		}*/
 		
 		private ListViewItem FindItem(string jobID)
 		{
@@ -3377,10 +3378,10 @@ namespace EmailSender
 //			return null;
 		}
 		
-		private void SendMailSessionLog(object sender,Log_EventArgs e)
+		/*private void SendMailSessionLog(object sender,Log_EventArgs e)
 		{
 			Log(e.LogText);
-		}
+		}*/
 
 		private void Log(string pMsg)
 		{
