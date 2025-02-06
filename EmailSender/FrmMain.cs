@@ -304,12 +304,12 @@ namespace EmailSender
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.uxListViewAddress = new System.Windows.Forms.ListView();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -334,8 +334,8 @@ namespace EmailSender
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuAttach = new System.Windows.Forms.ContextMenu();
             this.menuItem53 = new System.Windows.Forms.MenuItem();
             this.menuItem51 = new System.Windows.Forms.MenuItem();
@@ -346,8 +346,8 @@ namespace EmailSender
             this.btnAttAdd = new System.Windows.Forms.Button();
             this.tabLog = new System.Windows.Forms.TabPage();
             this.lvLog = new System.Windows.Forms.ListView();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -889,10 +889,10 @@ namespace EmailSender
             this.uxListViewAddress.SmallImageList = this.imageList2;
             this.uxListViewAddress.UseCompatibleStateImageBehavior = false;
             this.uxListViewAddress.View = System.Windows.Forms.View.Details;
+            this.uxListViewAddress.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewAddress_ColumnClick);
+            this.uxListViewAddress.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listViewAddress_ItemCheck);
             this.uxListViewAddress.SelectedIndexChanged += new System.EventHandler(this.listViewAddress_SelectedIndexChanged);
             this.uxListViewAddress.DoubleClick += new System.EventHandler(this.listViewAddress_DoubleClick);
-            this.uxListViewAddress.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listViewAddress_ItemCheck);
-            this.uxListViewAddress.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewAddress_ColumnClick);
             this.uxListViewAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listViewAddress_KeyDown);
             // 
             // columnHeader3
@@ -963,7 +963,6 @@ namespace EmailSender
             // webBrowser1
             // 
             resources.ApplyResources(this.webBrowser1, "webBrowser1");
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
             // 
@@ -1175,6 +1174,7 @@ namespace EmailSender
             this.columnHeader8});
             resources.ApplyResources(this.lvLog, "lvLog");
             this.lvLog.FullRowSelect = true;
+            this.lvLog.HideSelection = false;
             this.lvLog.MultiSelect = false;
             this.lvLog.Name = "lvLog";
             this.lvLog.UseCompatibleStateImageBehavior = false;
@@ -1352,8 +1352,8 @@ namespace EmailSender
             this.KeyPreview = true;
             this.Menu = this.mainMenu1;
             this.Name = "FrmMain";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Closing += new System.ComponentModel.CancelEventHandler(this.Form1_Closing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanelMsg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanelStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanelSuccess)).EndInit();
@@ -2292,24 +2292,23 @@ namespace EmailSender
 		/// </summary>
 		/// <param name="isBusy">true=busy, false=idle</param>
 
-		private void SetBusy(bool isBusy)
-		{
-			mnuSendStart.Enabled = !isBusy;
-			toolBarButtonStart.Enabled = !isBusy;
-			mnuSendPause.Enabled = isBusy;
-			mnuSendStop.Enabled = isBusy;
-			toolBarButtonPause.Enabled = isBusy;
-			toolBarButtonStop.Enabled = isBusy;
-			if(isBusy)
-			{
-				statusBarPanelStatus.Text = "Busy";
-			}
-			else
-			{
-				statusBarPanelStatus.Text = "Idle";
-			}
-			m_busy = isBusy;
-		}
+		    private void SetBusy(bool isBusy)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<bool>(SetBusy), isBusy);
+                return;
+            }
+
+            mnuSendStart.Enabled = !isBusy;
+            toolBarButtonStart.Enabled = !isBusy;
+            mnuSendPause.Enabled = isBusy;
+            mnuSendStop.Enabled = isBusy;
+            toolBarButtonPause.Enabled = isBusy;
+            toolBarButtonStop.Enabled = isBusy;
+            statusBarPanelStatus.Text = isBusy ? "Busy" : "Idle";
+            m_busy = isBusy;
+        }
 
 		private void DispStatus()
 		{
@@ -2581,39 +2580,41 @@ namespace EmailSender
                 ListViewItem itm = this.uxListViewAddress.Items[pAdr.Index];
                 itm.SubItems[5].Text = "MailKit";
 
-                var message = new MimeMessage();
-                message.From.Add(new MailboxAddress(fromName, fromEmail));
-                foreach (var toAddr in new string[] { to })
+                using (var message = new MimeMessage())
                 {
-                    message.To.Add(new MailboxAddress(null, toAddr));
-                }
-                message.Subject = ParseMsg(txtSubject.Text, pAdr, svr);
-
-                message.Body = new TextPart("plain")
-                {
-                    Text = ParseMsg(txtBody.Text, pAdr, svr)
-                };
-
-                using (var client = new SmtpClient())
-                {
-                    ShowItemCarrier(pAdr.Index, "MailKit SMTP: " + svr.HostID.ToString());
-
                     try
                     {
-                        client.Connect(svr.Host, svr.Port, useSsl: !svr.StartTls);
+                        message.From.Add(new MailboxAddress(fromName, fromEmail));
+                        foreach (var toAddr in new string[] { to })
+                        {
+                            message.To.Add(new MailboxAddress(null, toAddr));
+                        }
+                        message.Subject = ParseMsg(txtSubject.Text, pAdr, svr);
 
-                        // Note: only needed if the SMTP server requires authentication
-                        client.Authenticate(svr.UserID, svr.Password);
+                        message.Body = new TextPart("plain")
+                        {
+                            Text = ParseMsg(txtBody.Text, pAdr, svr)
+                        };
 
-                        client.Send(message);
-                        client.Disconnect(true);
+                        using (var client = new SmtpClient())
+                        {
+                            ShowItemCarrier(pAdr.Index, "MailKit SMTP: " + svr.HostID.ToString());
 
-                        _cntActive--;
-                        itm.SubItems[3].Text = "Send completed.";
-                        itm.Checked = false;
-                        itm.ImageIndex = 0;
-                        m_cntSuccess++;
-                        DispStatus();
+                            client.Connect(svr.Host, svr.Port, useSsl: !svr.StartTls);
+
+                            // Note: only needed if the SMTP server requires authentication
+                            client.Authenticate(svr.UserID, svr.Password);
+
+                            client.Send(message);
+                            client.Disconnect(true);
+
+                            _cntActive--;
+                            itm.SubItems[3].Text = "Send completed.";
+                            itm.Checked = false;
+                            itm.ImageIndex = 0;
+                            m_cntSuccess++;
+                            DispStatus();
+                        }
                     }
                     catch (Exception e)
                     {
@@ -2623,7 +2624,6 @@ namespace EmailSender
                         DispStatus();
                     }
                 }
-
                 /* removed old Smtp_Client code
                 _smtpClient.SmartHost = svr.Host;
                 _smtpClient.UseSmartHost = true;
@@ -2663,12 +2663,19 @@ namespace EmailSender
             }
         }
 
-		private void Stopped()
-		{
-			Log("Stopped");
-			SetBusy(false);
-			statusBarPanelMsg.Text = "Stopped";
-		}
+        private void Stopped()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(Stopped));
+            }
+            else
+            {
+                Log("Stopped");
+                SetBusy(false);
+                statusBarPanelMsg.Text = "Stopped";
+            }
+        }
 		
 		private void CheckDuplicate()
 		{
@@ -3429,12 +3436,12 @@ namespace EmailSender
 
 		private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 		{
-			if (m_busy)
+			/*if (m_busy)
 			{
 				MessageBox.Show (Application.ProductName + " is busy. Please stop all jobs and try again.");
 				e.Cancel = true;
 			}
-			else
+			else*/
 			{
 				m_paused = false;
 				if(IfDirty)

@@ -43,9 +43,9 @@ namespace EmailSender
 		[XmlElement("LimitPerConn")] public int _limitPerConn = 5;
 		[XmlElement("PerConnDelay")] public int _perConnDelay = 2;
 		[XmlElement("MaxThreads")] public int _maxThreads = 1;
-		[XmlElement("IfSendDirect")] public bool _ifSendDirect = true;
+		[XmlElement("IfSendDirect")] public bool _ifSendDirect = false;
 		[XmlElement("IfSendMAPI")] public bool _ifSendviaMAPI = false;
-		[XmlElement("IfSMTP")] public bool _ifSMTP = false;
+		[XmlElement("IfSMTP")] public bool _ifSMTP = true;
 		[XmlElement("IfReplaceDup")] public bool _ifReplaceDup = true;
 		[XmlElement("IfNoImportDup")] public bool _ifNoImportDup = false;
 		[XmlElement("IfCreateDup")] public bool _ifCreateDup = false;
