@@ -250,12 +250,6 @@
     <Content Include="App.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NET\Net.csproj">
-      <Project>{7AB36CCF-5FFD-4780-A54E-A102ECA028B5}</Project>
-      <Name>Net</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="MailKit">
       <Version>4.10.0</Version>
     </PackageReference>
