@@ -5,6 +5,8 @@
 # Build output
 [Bb]in/
 [Oo]bj/
+# Inno Setup installer output (produced by bump-version.ps1)
+Setup/
 [Dd]ebug/
 [Rr]elease/
 [Dd]ebugPublic/

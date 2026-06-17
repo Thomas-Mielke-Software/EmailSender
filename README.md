@@ -123,6 +123,20 @@ EmailSender/bin/Release/EmailSender.exe
 > msbuild EmailSender/EmailSender.csproj /t:Restore;Build /p:Configuration=Release
 > ```
 
+### Creating the installers
+
+Windows installers are built with [Inno Setup 6](https://jrsoftware.org/isinfo.php) (6.2 or newer). The [`bump-version.ps1`](bump-version.ps1) script raises the version in `AssemblyInfo.cs`, mirrors it into both `.iss` files, builds the Release output, and compiles the x64 and ARM64 installers into `Setup/`:
+
+```powershell
+# Increase the version (major | minor | patch), build, and package
+.\bump-version.ps1 -Part patch
+
+# Preview the version change only, without building
+.\bump-version.ps1 -Part patch -DryRun
+```
+
+Both installers ship the same AnyCPU binaries; the ARM64 one simply installs natively on ARM64 Windows (the managed code then runs through x64 emulation). The produced executables are **not signed** — sign them yourself, or configure a sign tool and enable the `SignTool` line in the `.iss` files.
+
 ---
 
 ## Running the tests
@@ -260,8 +274,9 @@ EmailSender.sln              Visual Studio solution
 │  ├─ MapiApi.cs             MAPI integration
 │  └─ Image/                 Toolbar and status icons
 ├─ UnitTests/                NUnit 3 test project
-├─ SetupEmailSender/         Visual Studio Installer project (x86)
-├─ SetupEmailSender_x64/     Visual Studio Installer project (x64)
+├─ EmailSender-x64.iss       Inno Setup script (x64 installer)
+├─ EmailSender-arm64.iss     Inno Setup script (ARM64 installer)
+├─ bump-version.ps1          Bumps the version, builds Release, compiles installers
 └─ Doc/                      Change log, release notes, screenshots
 ```
 
