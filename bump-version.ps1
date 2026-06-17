@@ -52,12 +52,33 @@ param(
 $ErrorActionPreference = 'Stop'
 $repoRoot      = $PSScriptRoot
 $assemblyInfo  = Join-Path $repoRoot 'EmailSender\AssemblyInfo.cs'
-$issFiles      = @(
-    Join-Path $repoRoot 'EmailSender-x64.iss'
-    Join-Path $repoRoot 'EmailSender-arm64.iss'
-)
-$solution      = Join-Path $repoRoot 'EmailSender.sln'
-$iscc          = 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe'
+# Single universal installer (x86 / x64 / ARM64); AnyCPU binaries.
+$issFile       = Join-Path $repoRoot 'EmailSender.iss'
+
+# Locate ISCC.exe (Inno Setup 6). Newer releases install per-user under
+# %LOCALAPPDATA%; older ones under Program Files. Registry first, then known
+# locations.
+function Find-Iscc {
+    foreach ($key in @(
+        'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Inno Setup 6_is1',
+        'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Inno Setup 6_is1',
+        'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Inno Setup 6_is1')) {
+        if (Test-Path $key) {
+            $loc = (Get-ItemProperty $key).InstallLocation
+            if ($loc) {
+                $exe = Join-Path $loc 'ISCC.exe'
+                if (Test-Path $exe) { return $exe }
+            }
+        }
+    }
+    foreach ($exe in @(
+        (Join-Path $env:LOCALAPPDATA 'Programs\Inno Setup 6\ISCC.exe'),
+        (Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\ISCC.exe'),
+        (Join-Path $env:ProgramFiles 'Inno Setup 6\ISCC.exe'))) {
+        if (Test-Path $exe) { return $exe }
+    }
+    return $null
+}
 
 # --- 1. Read current version from AssemblyInfo.cs -------------------------------
 if (-not (Test-Path $assemblyInfo)) { throw "Not found: $assemblyInfo" }
@@ -95,23 +116,20 @@ if (-not $DryRun) {
         (New-Object System.Text.UTF8Encoding $false))
 }
 
-# --- 4. Update the .iss files (#define MyAppVersion) ----------------------------
-foreach ($iss in $issFiles) {
-    Write-Host "$(Split-Path $iss -Leaf):"
-    if (-not (Test-Path $iss)) { throw "Not found: $iss" }
-    $issText = Get-Content $iss -Raw -Encoding UTF8
-    if ($issText -notmatch '#define\s+MyAppVersion\s+"[^"]*"') {
-        Write-Host "  WARN: MyAppVersion not found, skipped." -ForegroundColor Yellow
-        continue
-    }
-    $newIssText = [regex]::Replace($issText,
-        '(#define\s+MyAppVersion\s+")[^"]*(")',
-        "`${1}$newVersion`${2}")
-    Write-Host "  -> $iss" -ForegroundColor Green
-    if (-not $DryRun) {
-        [System.IO.File]::WriteAllText($iss, $newIssText,
-            (New-Object System.Text.UTF8Encoding $false))
-    }
+# --- 4. Update EmailSender.iss (#define MyAppVersion) ---------------------------
+Write-Host "$(Split-Path $issFile -Leaf):"
+if (-not (Test-Path $issFile)) { throw "Not found: $issFile" }
+$issText = Get-Content $issFile -Raw -Encoding UTF8
+if ($issText -notmatch '#define\s+MyAppVersion\s+"[^"]*"') {
+    throw "MyAppVersion not found in $issFile"
+}
+$newIssText = [regex]::Replace($issText,
+    '(#define\s+MyAppVersion\s+")[^"]*(")',
+    "`${1}$newVersion`${2}")
+Write-Host "  -> $issFile" -ForegroundColor Green
+if (-not $DryRun) {
+    [System.IO.File]::WriteAllText($issFile, $newIssText,
+        (New-Object System.Text.UTF8Encoding $false))
 }
 
 if ($DryRun) {
@@ -136,15 +154,14 @@ if (-not $NoBuild) {
     if ($LASTEXITCODE -ne 0) { throw "Build failed (exit code $LASTEXITCODE)." }
 }
 
-# --- 6. Compile the installers --------------------------------------------------
+# --- 6. Compile the installer ---------------------------------------------------
 if (-not $NoInstaller) {
-    if (-not (Test-Path $iscc)) { throw "ISCC.exe not found: $iscc" }
-    foreach ($iss in $issFiles) {
-        Write-Host ""
-        Write-Host "Compiling $(Split-Path $iss -Leaf)..." -ForegroundColor Cyan
-        & $iscc $iss
-        if ($LASTEXITCODE -ne 0) { throw "ISCC failed for $iss (exit code $LASTEXITCODE)." }
-    }
+    $iscc = Find-Iscc
+    if (-not $iscc) { throw "ISCC.exe (Inno Setup 6) not found." }
+    Write-Host ""
+    Write-Host "Compiling $(Split-Path $issFile -Leaf) (using $iscc)..." -ForegroundColor Cyan
+    & $iscc $issFile
+    if ($LASTEXITCODE -ne 0) { throw "ISCC failed (exit code $LASTEXITCODE)." }
 }
 
 # --- 7. Git commit + annotated tag ----------------------------------------------
@@ -160,10 +177,10 @@ if (-not $NoGit) {
     $ErrorActionPreference = 'Continue'
     try {
         # Stage first so this works whether the files are modified or still
-        # untracked (the .iss files on the very first release), then commit
+        # untracked (e.g. EmailSender.iss on the very first release), then commit
         # exactly those paths so unrelated staged changes are left alone.
-        & git -C $repoRoot add -- $assemblyInfo $issFiles[0] $issFiles[1]
-        & git -C $repoRoot commit -m "$gitTag" -- $assemblyInfo $issFiles[0] $issFiles[1]
+        & git -C $repoRoot add -- $assemblyInfo $issFile
+        & git -C $repoRoot commit -m "$gitTag" -- $assemblyInfo $issFile
         if ($LASTEXITCODE -ne 0) {
             Write-Host "  WARN: git commit failed / nothing to commit (exit $LASTEXITCODE)." -ForegroundColor Yellow
         }

@@ -1,13 +1,11 @@
 ; ============================================================================
-;  EmailSender - Inno Setup script (ARM64)
-;  Requires Inno Setup 6.2+.  Compile with:  ISCC.exe EmailSender-arm64.iss
+;  EmailSender - Inno Setup script (universal: x86 / x64 / ARM64)
+;  Requires Inno Setup 6.3+.  Compile with:  ISCC.exe EmailSender.iss
 ;  The version is kept in sync by bump-version.ps1 (updates MyAppVersion).
 ;
-;  Note: EmailSender is an AnyCPU .NET Framework 4.8 application, so the very
-;  same managed binaries are shipped here as in the x64 installer. On ARM64
-;  Windows they run through the built-in x64 emulation layer. This script
-;  exists so the installer runs natively on ARM64 and installs into the
-;  native 64-bit Program Files.
+;  EmailSender is an AnyCPU .NET Framework 4.8 application, so the binaries are
+;  architecture-neutral managed IL. A single installer therefore serves every
+;  Windows architecture; only the install location bitness differs per system.
 ; ============================================================================
 
 #define MyAppName "EmailSender"
@@ -19,7 +17,6 @@
 #define SourceDir "EmailSender\bin\Release"
 
 [Setup]
-; AppId ties x64 and arm64 builds together as one upgradeable product.
 ; (Reused from the old SetupEmailSender UpgradeCode.)
 AppId={{B649D5E2-B371-4B94-BF45-51C6323FE090}
 AppName={#MyAppName}
@@ -34,15 +31,16 @@ DefaultGroupName={#MyAppName}
 UninstallDisplayIcon={app}\{#MyAppExeName}
 LicenseFile=LICENSE
 OutputDir=Setup
-OutputBaseFilename=EmailSender-{#MyAppVersion}-arm64
+OutputBaseFilename=EmailSender-{#MyAppVersion}
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
-; Only run on ARM64 Windows and install into the native 64-bit folders.
-ArchitecturesAllowed=arm64
-ArchitecturesInstallIn64BitMode=arm64
-; ARM64 desktop Windows is Windows 10 or newer.
-MinVersion=10.0
+; ArchitecturesAllowed is left unset on purpose -> the installer runs on x86,
+; x64 and ARM64. On x64-compatible systems (x64 and ARM64) it installs into the
+; native 64-bit Program Files / registry view; on x86 it installs 32-bit.
+ArchitecturesInstallIn64BitMode=x64compatible
+; .NET Framework 4.8 requires Windows 7 SP1 or newer.
+MinVersion=6.1sp1
 ; Offer to close EmailSender automatically if it is running during install.
 CloseApplications=yes
 RestartApplications=no

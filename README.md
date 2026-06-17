@@ -125,17 +125,20 @@ EmailSender/bin/Release/EmailSender.exe
 
 ### Creating the installers
 
-Windows installers are built with [Inno Setup 6](https://jrsoftware.org/isinfo.php) (6.2 or newer). The [`bump-version.ps1`](bump-version.ps1) script raises the version in `AssemblyInfo.cs`, mirrors it into both `.iss` files, builds the Release output, and compiles the x64 and ARM64 installers into `Setup/`:
+The Windows installer is built with [Inno Setup 6](https://jrsoftware.org/isinfo.php) (6.3 or newer). The [`bump-version.ps1`](bump-version.ps1) script raises the version in `AssemblyInfo.cs`, mirrors it into [`EmailSender.iss`](EmailSender.iss), builds the Release output, compiles the installer into `Setup/`, and creates a git commit + tag `vX.Y.Z`:
 
 ```powershell
-# Increase the version (major | minor | patch), build, and package
+# Increase the version (major | minor | patch), build, package, commit + tag
 .\bump-version.ps1 -Part patch
 
-# Preview the version change only, without building
+# ...and push the commit and tag as well
+.\bump-version.ps1 -Part minor -Push
+
+# Preview the version change only (no write, build or git)
 .\bump-version.ps1 -Part patch -DryRun
 ```
 
-Both installers ship the same AnyCPU binaries; the ARM64 one simply installs natively on ARM64 Windows (the managed code then runs through x64 emulation). The produced executables are **not signed** — sign them yourself, or configure a sign tool and enable the `SignTool` line in the `.iss` files.
+Because EmailSender is an AnyCPU .NET Framework application, a **single installer covers x86, x64 and ARM64** — the managed binaries are architecture-neutral, so no per-architecture build is needed. The produced executables are **not signed** unless a sign tool is enabled (the `SignTool` line in `EmailSender.iss`); configure your own in the Inno Setup IDE.
 
 ---
 
@@ -274,9 +277,8 @@ EmailSender.sln              Visual Studio solution
 │  ├─ MapiApi.cs             MAPI integration
 │  └─ Image/                 Toolbar and status icons
 ├─ UnitTests/                NUnit 3 test project
-├─ EmailSender-x64.iss       Inno Setup script (x64 installer)
-├─ EmailSender-arm64.iss     Inno Setup script (ARM64 installer)
-├─ bump-version.ps1          Bumps the version, builds Release, compiles installers
+├─ EmailSender.iss           Inno Setup script (universal x86/x64/ARM64 installer)
+├─ bump-version.ps1          Bumps the version, builds Release, compiles the installer
 └─ Doc/                      Change log, release notes, screenshots
 ```
 
