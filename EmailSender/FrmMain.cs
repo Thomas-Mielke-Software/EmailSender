@@ -215,10 +215,11 @@ namespace EmailSender
 		{
 			if( disposing )
 			{
-				if (components != null) 
+				if (components != null)
 				{
 					components.Dispose();
 				}
+				_pauseGate.Dispose();
 			}
 			base.Dispose( disposing );
 		}
@@ -1438,10 +1439,11 @@ namespace EmailSender
 		int m_Total = 0;
 		int m_cntFail = 0;
 		int m_cntSuccess = 0;
-		bool m_paused = false;
-		bool m_stop;
+		volatile bool m_paused = false;
+		volatile bool m_stop;
 		MailComparer comparer = new MailComparer();
-		bool m_busy = false;
+		volatile bool m_busy = false;
+		private readonly ManualResetEventSlim _pauseGate = new ManualResetEventSlim(true);
 
         //A list of email addresses in memory 
 		private Dictionary<string,  int> _ht = new Dictionary<string,  int>();
@@ -2378,10 +2380,10 @@ namespace EmailSender
                 }
             }
 		}
-		private void SendViaMapiComplete()
+		private void SendCompleted()
 		{
             if (InvokeRequired)
-                Invoke(new MethodInvoker(SendViaMapiComplete));
+                Invoke(new MethodInvoker(SendCompleted));
             else
             {
                 Log("All done.");
@@ -2703,6 +2705,7 @@ namespace EmailSender
 			{
 				Log("Continue");
 				m_paused = false;
+				pauseGate.Set();
 				SetBusy(true);
 				statusBarPanelMsg.Text = "Continue";
 				foreach(ListViewItem itm in uxListViewAddress.CheckedItems)
@@ -2748,6 +2751,7 @@ namespace EmailSender
 				statusBarPanelMsg.Text = "Sending..."; 
 				m_stop = false;
 				m_paused = false;
+				_pauseGate.Set();   // ensure the gate is open for a fresh run
 				Thread t = new Thread(new ThreadStart(SendStart));
 				t.Start();
 			}
@@ -2802,15 +2806,15 @@ namespace EmailSender
                         }
 
                         cnt++;
-                        while (m_paused)
+                        // Block here while paused. Returns immediately when running,
+                        // and is released on resume (gate Set) or stop (gate Set +
+                        // m_stop). No busy-wait, no cached flag.
+                        _pauseGate.Wait();
+                        if (m_stop)
                         {
-                            if (m_stop)
-                            {
-                                Stopped();
-                                return;
-                            }
-                            Thread.Sleep(100);
-                        };
+                            Stopped();
+                            return;
+                        }
                         ShowItemStatus(adr.Index, 1, "Start sending");
                         _cntActive++;
                         if (_appOptions._ifSendviaMAPI)
@@ -2903,8 +2907,12 @@ namespace EmailSender
                     }
                 }
             }
-            if (_appOptions._ifSendviaMAPI)
-                SendViaMapiComplete();
+            // All addresses processed. Re-enable the UI (Start enabled, Pause/Stop
+            // disabled) for every send mode. Previously only the MAPI path called a
+            // completion handler; the SMTP/Direct paths relied on the old async
+            // client's CompletedAll event, which no longer fires after the switch to
+            // synchronous MailKit sending, so the toolbar stayed stuck in "busy".
+            SendCompleted();
         }
 
         private ClassFile _mainList;
@@ -3276,50 +3284,6 @@ namespace EmailSender
 			}
 		}
 
-        private delegate void SendMailCompletedAllDelegate(object sender, System.EventArgs e);
-        private void SendMailCompletedAll(object sender, System.EventArgs e)
-        {
-            if (InvokeRequired)
-                Invoke(new SendMailCompletedAllDelegate(SendMailCompletedAll), new object[] { sender, e });
-            else
-            {
-                Log("SendMail job remain: " + _cntQueued.ToString());
-                if (/*(!_smtpClient.IsSending) && */(_cntActive == 0) && (_cntQueued == 0))
-                {
-                    while (m_paused)
-                    {
-                        if (m_stop)
-                        {
-                            Stopped();
-                            return;
-                        }
-                        Thread.Sleep(100);
-                    };
-                    Log("All done.");
-                    statusBarPanelMsg.Text = "Send mail completed";
-
-                    SetBusy(false);
-
-                    //retry failed addresses
-                    if (_appOptions._ifRetryFail)
-                    {
-                        int cnt = 0;
-                        foreach (ListViewItem itm in uxListViewAddress.Items)
-                        {
-                            if (itm.Checked) cnt++;
-                        }
-                        if (cnt > 0)
-                        {
-                            Log("Retry for failed address in " + _appOptions._retryFail.ToString() + " second(s)...");
-                            tmrFailRetry.Interval = _appOptions._retryFail * 1000;
-                            tmrFailRetry.Start();
-                            SetBusy(true);
-                        }
-                    }
-                }
-            }
-        }
-
 		//private void SendMailSendJobCompleted(object sender, SendJob_EventArgs e)
 		//{
 		//	_cntActive--;
@@ -3419,6 +3383,7 @@ namespace EmailSender
 			toolBarButtonStart.Enabled = true;
 			toolBarButtonPause.Enabled = false;
 			m_paused = true;
+			_pauseGate.Reset();   // close the gate so the worker blocks at its next pause point
 			statusBarPanelStatus.Text = "Pause";
 			statusBarPanelMsg.Text = "Stopping";
 			foreach(ListViewItem itm in uxListViewAddress.CheckedItems)
@@ -3466,6 +3431,7 @@ namespace EmailSender
 		private void menuSendStop_Click(object sender, System.EventArgs e)
 		{
 			m_stop = true;
+			_pauseGate.Set();   // release a paused worker so it can observe m_stop and exit
 			Log("Stopping");
 			statusBarPanelMsg.Text = "Stopping";
 			foreach(ListViewItem itm in uxListViewAddress.CheckedItems)

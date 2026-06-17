@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using NUnit.Framework;
 using System.IO;
 
 namespace UnitTests
 {
-    [TestFixture]
+    // FrmMain hosts a WebBrowser ActiveX control, which only works on an STA
+    // thread. NUnit runs tests on an MTA thread by default, so the fixture is
+    // pinned to STA here (replaces the old NUnit 2.x Project1.config/.nunit setup).
+    [TestFixture, Apartment(ApartmentState.STA)]
     public class Class1
     {
         public Class1()
         {
-            //Wow, this is tricky. NUnit GUI by default runs in MTA mode. The WebBrowser control on the form does not like it. In order to run in STA mode, have to create a Project1.config file rest in the same directory with Project1.nunit file.
-            //System.Threading.Thread.CurrentThread.SetApartmentState(System.Threading.ApartmentState.STA);
         }
-        
-        [TestFixtureTearDown]
+
+        [OneTimeTearDown]
         public void TearDown()
         {
             //Use Task Manager to see if any memory leak.
