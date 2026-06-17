@@ -9,7 +9,7 @@
 ; ============================================================================
 
 #define MyAppName "EmailSender"
-#define MyAppVersion "2.2.0.0"
+#define MyAppVersion "2.3.0.0"
 #define MyAppPublisher "Thomas Mielke Softwareentwicklung"
 #define MyAppURL "https://github.com/Thomas-Mielke-Software/EmailSender"
 #define MyAppExeName "EmailSender.exe"
