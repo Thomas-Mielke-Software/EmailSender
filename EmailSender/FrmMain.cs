@@ -2705,7 +2705,7 @@ namespace EmailSender
 			{
 				Log("Continue");
 				m_paused = false;
-				pauseGate.Set();
+				_pauseGate.Set();   // release the worker so it resumes sending
 				SetBusy(true);
 				statusBarPanelMsg.Text = "Continue";
 				foreach(ListViewItem itm in uxListViewAddress.CheckedItems)
